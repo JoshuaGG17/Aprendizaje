@@ -1,33 +1,17 @@
 <?php
-include 'database.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nombre = $_POST['nombre'];
-    $fecha_nacimiento = $_POST['fecha_nacimiento'];
-    $edad = $_POST['edad']; // Calculada por JS
-    $rol = $_POST['rol'];
-    $fecha_inicio_labores = $_POST['fecha_inicio_labores'];
-    $telefono = $_POST['telefono'];
-
-    $sql = "INSERT INTO usuarios (nombre, fecha_nacimiento, edad, rol, fecha_inicio_labores, telefono) 
-            VALUES ('$nombre', '$fecha_nacimiento', $edad, '$rol', '$fecha_inicio_labores', '$telefono')";
-
-    if ($conn->query($sql)) {
-        header('Location: index.php');
-        exit;
-    } else {
-        echo "Error: " . $conn->error;
-    }
-}
+include '../backend/function.php';
+crearUsuario();
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Crear Usuario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container mt-5">
         <h1>Crear Nuevo Usuario</h1>
@@ -39,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="mb-3">
                 <label for="fecha_nacimiento" class="form-label">Fecha de nacimiento</label>
-                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required onchange="calcularEdad()">
+                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required
+                    onchange="calcularEdad()">
             </div>
 
             <div class="mb-3">
@@ -68,23 +53,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
 
             <button type="submit" class="btn btn-primary">Guardar</button>
+            <a href="index.php" class="btn btn-secondary">Regresar</a>
         </form>
     </div>
 
+    <script src="../backend/function.js"></script>
     <script>
-        function calcularEdad() {
-            const fechaNacimiento = new Date(document.getElementById('fecha_nacimiento').value);
-            const hoy = new Date();
-            let edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
-            
-            // Ajustar si aún no ha pasado el cumpleaños este año
-            const mes = hoy.getMonth() - fechaNacimiento.getMonth();
-            if (mes < 0 || (mes === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
-                edad--;
-            }
-            
-            document.getElementById('edad').value = edad;
-        }
+        window.calcularEdad = calcularEdad;
     </script>
 </body>
+
 </html>

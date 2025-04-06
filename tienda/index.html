@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clon</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -13,54 +15,48 @@
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
             <div class="container">
                 <a href="#" class="navbar-brand">Logotipo</a>
-                <button 
-                class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#contenidoMenu" 
-                aria-controls="#contenidoMenu" 
-                aria-expanded="false" 
-                aria-label="Mostrar/Ocultar navegacion"
-                >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="contenidoMenu">
-                <!-- ENLACES -->
-                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Inicio</a>
-                    </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoMenu"
+                    aria-controls="#contenidoMenu" aria-expanded="false" aria-label="Mostrar/Ocultar navegacion">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="contenidoMenu">
+                    <!-- ENLACES -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Inicio</a>
+                        </li>
 
-                    <!-- DROPDOWN -->
-                    <li class="nav-item">
-                        <a href="#" class="nav-link dropdown-toggle" id="submenuProductos" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                        <!-- SUB-ELEMENTOS -->
-                         <ul class="dropdown-menu" aria-labelledby="submenuProductos">
-                            <li><a href="#" class="dropdown-item">Computadoras</a></li>
-                            <li><a href="#" class="dropdown-item">Laptops</a></li>
-                            <li><a href="#" class="dropdown-item">Smartphones</a></li>
-                            <li><a href="#" class="dropdown-item">Drones</a></li>
-                            <li><a href="#" class="dropdown-item">Accesorios</a></li>
-                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Contacto</a>
-                    </li>
-                 </ul>
+                        <!-- DROPDOWN -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle" id="submenuProductos" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                            <!-- SUB-ELEMENTOS -->
+                            <ul class="dropdown-menu" aria-labelledby="submenuProductos">
+                                <li><a href="#" class="dropdown-item">Computadoras</a></li>
+                                <li><a href="#" class="dropdown-item">Laptops</a></li>
+                                <li><a href="#" class="dropdown-item">Smartphones</a></li>
+                                <li><a href="#" class="dropdown-item">Drones</a></li>
+                                <li><a href="#" class="dropdown-item">Accesorios</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
 
-                 <form class="d-flex">
-                    <input type="search" class="form-control me-2" aria-label="buscar" placeholder="Buscar">
-                    <button class="btn btn-primary ">Buscar</button>
-                 </form>
-            </div>
+                    <form class="d-flex">
+                        <input type="search" class="form-control me-2" aria-label="buscar" placeholder="Buscar">
+                        <button class="btn btn-primary ">Buscar</button>
+                    </form>
+                </div>
 
             </div>
         </nav>
-    </header> 
+    </header>
 
 
     <!-- MAIN -->
-     <main class="container">
+    <main class="container">
         <div class="row">
             <div class="col">
                 <div id="slideshow" class="carousel slide" data-bs-ride="carousel">
@@ -77,37 +73,26 @@
                     </div>
 
                     <!-- CONTROLES ANTERIOR Y SIGUIENTE -->
-                     <button class="carousel-control-prev" type="button" data-bs-target="#slideshow" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#slideshow"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                         <span class="visually-hidden">Anterior</span>
-                     </button>
-                     <button class="carousel-control-next" type="button" data-bs-target="#slideshow" data-bs-slide="next">
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#slideshow"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon"></span>
                         <span class="visually-hidden">Siguiente</span>
-                     </button>
+                    </button>
 
-                     <!-- INDICADORES -->
-                      <div class="carousel-indicators">
-                        <button
-                        type="button"
-                        data-bs-target="#slideshow"
-                        data-bs-slide-to="0"
-                        class="active"
-                        aria-current="true"
-                        aria-label="Slide #1"></button>
-                        <button
-                        type="button"
-                        data-bs-target="#slideshow"
-                        data-bs-slide-to="1"
-                        aria-current="true"
-                        aria-label="Slide #2"></button>
-                        <button
-                        type="button"
-                        data-bs-target="#slideshow"
-                        data-bs-slide-to="2"
-                        aria-current="true"
-                        aria-label="Slide #3"></button>
-                      </div>
+                    <!-- INDICADORES -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide #1"></button>
+                        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="1" aria-current="true"
+                            aria-label="Slide #2"></button>
+                        <button type="button" data-bs-target="#slideshow" data-bs-slide-to="2" aria-current="true"
+                            aria-label="Slide #3"></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,11 +206,11 @@
                 </div>
             </div>
         </div>
-     </main>
+    </main>
 
 
-     <!-- FOOTER -->
-      <footer class="container">
+    <!-- FOOTER -->
+    <footer class="container">
         <div class="row border-top py-5 justify-content-between">
             <div class="col-auto">
                 <h3>AnimalesExoticos.com</h3>
@@ -236,9 +221,10 @@
                 <a href="#" class="btn btn-link">Subir de pagina</a>
             </div>
         </div>
-      </footer>
-    
-    
+    </footer>
+
+
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
